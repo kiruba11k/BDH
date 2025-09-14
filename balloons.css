@@ -1,0 +1,111 @@
+/* =========================
+   Balloons Styles - Responsive
+   ========================= */
+
+.balloons {
+    position: fixed;
+    bottom: -200px;
+    opacity: 0.6;
+    z-index: 99;
+    width: 100px;
+    max-width: 20vw;
+    height: 183px;
+    max-height: 35vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.balloons h2 {
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif;
+    font-size: 4vw;
+    max-font-size: 50px;
+    color: #BF4136;
+    text-shadow: 5px 5px 5px #FFF;
+    display: none;
+    font-weight: bold;
+}
+
+#b1, #b11 {
+    background-image: url('b1.png');
+}
+#b2, #b22 {
+    background-image: url('b2.png');
+}
+#b3, #b33 {
+    background-image: url('b3.png');
+}
+#b4, #b44 {
+    background-image: url('b4.png');
+}
+#b5, #b55 {
+    background-image: url('b5.png');
+}
+#b6, #b66 {
+    background-image: url('b6.png');
+}
+#b7, #b77 {
+    background-image: url('b7.png');
+}
+
+/* Balloon animations */
+.balloons-rotate-behaviour-one {
+    animation: balloons_rotate_one linear 10s infinite;
+    transform: rotate(30deg);
+}
+.balloons-rotate-behaviour-two {
+    animation: balloons_rotate_two linear 10s infinite;
+    transform: rotate(-20deg);
+}
+
+@keyframes balloons_rotate_one {
+    0% { transform: rotate(30deg); }
+    50% { transform: rotate(-30deg); }
+    100% { transform: rotate(30deg); }
+}
+@keyframes balloons_rotate_two {
+    0% { transform: rotate(-20deg); }
+    50% { transform: rotate(20deg); }
+    100% { transform: rotate(-20deg); }
+}
+
+/* =========================
+   Responsive Adjustments
+   ========================= */
+
+@media only screen and (max-width: 1024px) {
+    .balloons {
+        width: 80px;
+        height: 150px;
+        max-width: 25vw;
+        max-height: 30vh;
+    }
+    .balloons h2 {
+        font-size: 3vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .balloons {
+        width: 60px;
+        height: 120px;
+        max-width: 30vw;
+        max-height: 25vh;
+    }
+    .balloons h2 {
+        font-size: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .balloons {
+        width: 50px;
+        height: 100px;
+        max-width: 35vw;
+        max-height: 20vh;
+    }
+    .balloons h2 {
+        font-size: 4vw;
+    }
+}
